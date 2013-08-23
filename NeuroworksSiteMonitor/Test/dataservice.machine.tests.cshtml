@@ -1,0 +1,67 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Neuroworks Site Monitor</title>
+
+    @Styles.Render("~/Content/css", "~/Content/less")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" type="text/css" href="qunit/qunit.css" />
+</head>
+<body>
+    <h1 id="qunit-header">Neuroworks Site Monitor dataservice.machine Tests</h1>
+    <h2 id="qunit-banner"></h2>
+    <div id="qunit-testrunner-toolbar"></div>
+    <h2 id="qunit-userAgent"></h2>
+    <ol id="qunit-tests"></ol>
+    <div id="qunit-fixture"></div>
+
+@*    MIKE: compare with @Scripts.Render at the end of Index.cshtml - same loading order, 
+    just more calls to @Scripts.Render here*@
+    @Scripts.Render("~/bundles/jquery")
+    <script type="text/javascript" src="qunit/qunit.js"></script>
+    @Scripts.Render("~/bundles/jsextlibs")
+@*    <script src="~/Scripts/lib/require.js" type="text/javascript"></script>*@
+    <script src="~/Scripts/lib/requirejs/require.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //MIKE NOTE 1
+        //redefine require.js's define when first argument is 'dataservice.machine' i.e. when dataservice.machine.js script is run
+        //for unit test purposes to make windows.testFn be equal function(amplify) from
+        //define('dataservice.machine', ['amplify'], function(amplify){...})
+        //For any other argument a, call require.js's window.define saved earlier in windows.defineSaved,
+        //to have default require.js's behavior
+        window.defineSaved = window.define;
+        window.define = function (a, b, c) {
+            a === 'dataservice.machine' ? window.testFn = c : defineSaved(a, b, c);
+        };
+    </script>
+@*  define calls in the script below defines ajax requests and exposes interfaces wrapping them, 
+    like dataservice.machine.getMachines*@
+    <script type="text/javascript" src="~/Scripts/app/dataservice.machine.js"></script>
+@* defines in all mock modules are run by the call below     
+    @Scripts.Render("~/bundles/jsmocks") //LATER
+    *@
+    @*main.tests.js calls "define" on all required for the tests modules and bootstraps the testing app*@
+    <script src="main.tests.js" type="text/javascript"></script>
+@*  last call to aplify.request.define(<requestId, ex. sessions>...) wins
+    call to config.useMocks(true) in the script below in asyncTest function REDEFINES ajax requests exposed by dataservice.session.js to those defined in 
+    mock.dataservice.sesion.js in the following chain
+    config.useMocks(true)->redefines config.dataserviceInit to mock.dataserviceInit() which calls 
+    'mock/mock.dataservice.session'.defineApi('mock/mock.generator'.model) where defineApi redefines ajax requests with resorceId(s)
+    'session', 'sessions', 'sessionUpdate', 'session-Briefs' to the ones using mock data
+    ->config.useMocks*@
+    <script type="text/javascript" src="dataservice.machine.tests.js"></script>
+@*    <script src="~/Test/dataservice.machine.tests_try2.js"></script>*@
+    <script type="text/javascript">
+        //this call will cause factory functions for ko.bindingHandlers.js and ko.debug.helpers to be called
+        //I guess because dataservice.machine.tests module is dependent on ko and these are its plugins - I don't know better
+        //this call calls config module factory function, before dataservice.machine-tests-function factory function
+        //because config is this module's dependency
+        require(['dataservice.machine-tests-function']);
+        //require(['dataservice.machine-tests-function-try2']);
+    </script>
+
+</body>
+
+</html>

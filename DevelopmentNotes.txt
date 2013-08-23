@@ -1,0 +1,101 @@
+Data Types across the wire:
+public Session Get(int id) //Session Controller
+
+public class Session : SessionBrief
+{
+		//public int Id { get; set; }
+		//public string Title { get; set; }
+		//public string Code { get; set; }
+		//public int SpeakerId { get; set; }
+		//public int TrackId { get; set; }
+		//public int TimeSlotId { get; set; }
+		//public int RoomId { get; set; }
+		//public string Level { get; set; }
+		//public string Tags { get; set; }
+		public string Description { get; set; }
+
+		public virtual Person Speaker { get; set; }
+		public virtual Track Track { get; set; }
+		public virtual TimeSlot TimeSlot { get; set; }
+		public virtual Room Room { get; set; }
+
+		public virtual ICollection<Attendance> 
+			AttendanceList { get; set; }
+}
+
+public IEnumerable<Person> Get() //PersonsController
+
+public class Person
+{
+		public Person()
+		{
+			Gender = " "; // make no assumption
+			ImageSource = string.Empty;
+		}
+		public int Id { get; set; }
+		public string FirstName { get; set; }
+		public string LastName { get; set; }
+		public string Email { get; set; }
+		public string Blog { get; set; }
+		public string Twitter { get; set; }
+
+		[StringLength(1,MinimumLength = 1) ]
+		public string Gender { get; set; }
+		public string ImageSource { get; set; }
+		public string Bio { get; set; }
+
+		public virtual ICollection<Session> SpeakerSessions { get; set; }
+		public virtual ICollection<Attendance> AttendanceList { get; set; }
+}
+
+[ActionName("all")]
+public Lookups GetLookups() //passes object across the wire which has three properties each of which is array of POCO objects
+{
+	var lookups = new Lookups
+	{
+		Rooms = GetRooms().ToList(),
+		TimeSlots = GetTimeSlots().ToList(),
+		Tracks = GetTracks().ToList(),
+	};
+	return lookups;
+}
+{
+	rooms: [
+		{
+		id: 19,
+		name: "Alcatraz"
+		},
+		{
+		id: 28,
+		name: "Allenwood"
+		},
+	],
+	timeSlots: [
+		{
+		id: 1,
+		start: "2013-05-18T08:00:00",
+		isSessionSlot: false,
+		duration: 45
+		},
+		{
+		id: 2,
+		start: "2013-05-18T09:00:00",
+		isSessionSlot: true,
+		duration: 60
+		}
+	],
+	tracks: [
+	{
+		id: 5,
+		name: ".NET"
+		},
+		{
+		id: 4,
+		name: "ASP.NET"
+		}
+	]
+}
+//Do virtual properties go across the wire? I don't thinks so.
+
+//Data types from the viewpoint of database creation: inheritance
+Speaker is a DTO object, not DB object, is a subset of Person, but Person doesn't inherit from Speaker

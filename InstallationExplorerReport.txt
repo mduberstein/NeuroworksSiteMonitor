@@ -1,0 +1,124 @@
+----------------InstallationExplorer Report 01/04/2013 16:55:09-----------------
+
+--------------------------------MDUBERSTEIN-DT3---------------------------------
+
+<Date> {24/01/2013 15:46:40}
+<Machine> {<Name> {MDUBERSTEIN-DT3}, <IP> {192.168.35.38}}
+<SettingsServer> {MDUBERSTEINDT}, <SecurityServer> {MDUBERSTEINDT}
+<SoftwareVersion> {7.2 build 11}
+<SerialNo> {A201-0033-0007-DAB7*}, <OptionPack> {ED00-00FF-FF5B-7FC5}
+<InstallCode> {0x01040020}
+<PrimaryUse> {Acquisition | Video - Normal Res MPEG4 (EEG/Sleep) }
+<Platform> {CPU: Core 2 Duo 2.66 GHz, QTY: 4, RAM: 2048 MB, OS: Windows 7}
+<PlatformLimitations>
+Acquisition | Video - Normal Res MPEG4 (EEG/Sleep) 
+Configuration table version 7.1 is out of step with product version 7.2
+
+<---History--->
+
+<Date> {23/08/2012 08:44:37}
+<Machine> {<Name> {MDUBERSTEIN-DT3}, <IP> {192.168.35.38}}
+<SettingsServer> {MDUBERSTEINDT}, <SecurityServer> {MDUBERSTEINDT}
+<SoftwareVersion> {7.2 build 98}
+<SerialNo> {A201-0033-0007-DAB7*}, <OptionPack> {ED00-00FF-FF5B-7FC5}
+<InstallCode> {0x01000010}
+<PrimaryUse> {Review and Monitoring (EEG/Sleep) }
+<Platform> {CPU: Core 2 Duo 2.66 GHz, QTY: 4, RAM: 2048 MB, OS: Windows 7}
+<PlatformLimitations>
+Review and Monitoring (EEG/Sleep) 
+Configuration table version 7.1 is out of step with product version 7.2
+
+<Date> {18/01/2012 12:18:40}
+<Machine> {<Name> {MDUBERSTEIN-DT3}, <IP> {192.168.35.38}}
+<SettingsServer> {MDUBERSTEINDT}, <SecurityServer> {MDUBERSTEINDT}
+<SoftwareVersion> {7.2 build 98}
+<SerialNo> {A201-0033-0007-DAB7*}, <OptionPack> {ED00-00FF-FF5B-7FC5}
+<InstallCode> {0x01040020}
+<PrimaryUse> {Acquisition | Video - Normal Res MPEG4 (EEG/Sleep) }
+<Platform> {CPU: Core 2 Duo 2.66 GHz, QTY: 4, RAM: 2048 MB, OS: Windows 7}
+<PlatformLimitations>
+Acquisition | Video - Normal Res MPEG4 (EEG/Sleep) 
+Configuration table version 7.1 is out of step with product version 7.2
+
+----------------------------------MDUBERSTEIN-----------------------------------
+
+<Date> {06/02/2012 14:05:15}
+<Machine> {<Name> {MDUBERSTEIN}, <IP> {192.168.35.30}}
+<SettingsServer> {MDUBERSTEINDT}, <SecurityServer> {MDUBERSTEINDT}
+<SoftwareVersion> {7.0 build 63}
+<SerialNo> {A201-0033-0007-DAB7*}, <OptionPack> {ED00-00FF-FF5B-7FC5}
+<InstallCode> {0x01040020}
+<PrimaryUse> {Acquisition | Video - Normal Res MPEG4 (EEG/Sleep) }
+<Platform> {CPU: Core 2 Duo 2.66 GHz, QTY: 4, RAM: 2048 MB, OS: WinXP SP2}
+
+<---History--->
+
+<Date> {03/02/2012 14:53:43}
+<Machine> {<Name> {MDUBERSTEIN}, <IP> {192.168.35.30}}
+<SettingsServer> {MDUBERSTEINDT}, <SecurityServer> {MDUBERSTEINDT}
+<SoftwareVersion> {7.1 build 1432}
+<SerialNo> {A201-0033-0007-DAB7*}, <OptionPack> {ED00-00FF-FF5B-7FC5}
+<InstallCode> {0x01040020}
+<PrimaryUse> {Acquisition | Video - Normal Res MPEG4 (EEG/Sleep) }
+<Platform> {CPU: Core 2 Duo 2.66 GHz, QTY: 4, RAM: 2048 MB, OS: WinXP SP3}
+
+<Date> {03/02/2012 14:38:31}
+<Machine> {<Name> {MDUBERSTEIN}, <IP> {169.254.228.222}}
+<SettingsServer> {MDUBERSTEINDT}, <SecurityServer> {MDUBERSTEINDT}
+<SoftwareVersion> {7.1 build 1432}
+<SerialNo> {A201-0033-0007-DAB7*}, <OptionPack> {ED00-00FF-FF5B-7FC5}
+<InstallCode> {0x01040020}
+<PrimaryUse> {Acquisition | Video - Normal Res MPEG4 (EEG/Sleep) }
+<Platform> {CPU: Core 2 Duo 2.66 GHz, QTY: 4, RAM: 2048 MB, OS: WinXP SP3}
+
+<Date> {03/11/2011 09:45:58}
+<Machine> {<Name> {MDUBERSTEIN}, <IP> {192.168.35.84}}
+<SettingsServer> {MDUBERSTEINDT}, <SecurityServer> {MDUBERSTEINDT}
+<SoftwareVersion> {7.1 build 1432}
+<SerialNo> {A201-0033-0007-DAB7*}, <OptionPack> {ED00-00FF-FF5B-7FC5}
+<InstallCode> {0x01040020}
+<PrimaryUse> {Acquisition | Video - Normal Res MPEG4 (EEG/Sleep) }
+<Platform> {CPU: Core 2 Duo 2.66 GHz, QTY: 4, RAM: 2048 MB, OS: WinXP SP3}
+
+---------------------------------MDUBERSTEINDT----------------------------------
+
+<Date> {23/01/2013 13:58:28}
+<Machine> {<Name> {MDUBERSTEINDT}, <IP> {192.168.35.68}}
+<SettingsServer> {(LOCAL)}, <SecurityServer> {(LOCAL)}
+<SoftwareVersion> {7.2 build 5}
+<SerialNo> {A201-0033-0007-DAB7*}, <OptionPack> {ED00-00FF-FF5B-7FC5}
+<InstallCode> {0x01040020}
+<PrimaryUse> {Acquisition | Video - Normal Res MPEG4 (EEG/Sleep) (dual-monitor)}
+<Platform> {CPU: P4 (default) 2.80 GHz, QTY: 8, RAM: 2048 MB, OS: Windows 7}
+<PlatformLimitations>
+Acquisition | Video - Normal Res MPEG4 (EEG/Sleep) (dual-monitor)
+Configuration table version 7.1 is out of step with product version 7.2
+P4 (default) CPU (2.80GHz) is insufficient (min 3.20GHz)
+
+<---History--->
+
+<Date> {07/02/2012 18:32:55}
+<Machine> {<Name> {MDUBERSTEINDT}, <IP> {192.168.35.44}}
+<SettingsServer> {(LOCAL)}, <SecurityServer> {(LOCAL)}
+<SoftwareVersion> {7.2 build 96}
+<SerialNo> {A201-0033-0007-DAB7*}, <OptionPack> {ED00-00FF-FF5B-7FC5}
+<InstallCode> {0x01040020}
+<PrimaryUse> {Acquisition | Video - Normal Res MPEG4 (EEG/Sleep) (dual-monitor)}
+<Platform> {CPU: P4 (default) 2.80 GHz, QTY: 8, RAM: 2048 MB, OS: Windows 7}
+<PlatformLimitations>
+Acquisition | Video - Normal Res MPEG4 (EEG/Sleep) (dual-monitor)
+Configuration table version 7.1 is out of step with product version 7.2
+P4 (default) CPU (2.80GHz) is insufficient (min 3.20GHz)
+
+<Date> {21/11/2011 11:47:07}
+<Machine> {<Name> {MDUBERSTEINDT}, <IP> {192.168.35.44}}
+<SettingsServer> {(LOCAL)}, <SecurityServer> {(LOCAL)}
+<SoftwareVersion> {7.1 build 1470}
+<SerialNo> {A201-0033-0007-DAB7*}, <OptionPack> {ED00-00FF-FF5B-7FC5}
+<InstallCode> {0x01040020}
+<PrimaryUse> {Acquisition | Video - Normal Res MPEG4 (EEG/Sleep) (dual-monitor)}
+<Platform> {CPU: P4 (default) 2.80 GHz, QTY: 8, RAM: 2048 MB, OS: Windows 7}
+<PlatformLimitations>
+Acquisition | Video - Normal Res MPEG4 (EEG/Sleep) (dual-monitor)
+P4 (default) CPU (2.80GHz) is insufficient (min 3.20GHz)
+

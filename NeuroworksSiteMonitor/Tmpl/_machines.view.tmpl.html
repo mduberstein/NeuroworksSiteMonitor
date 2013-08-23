@@ -1,0 +1,31 @@
+﻿<!--model here is model.machine-->
+<article class="article-right-content">
+    <div class="machine" title="Go to machine details">
+        <div>
+            <label for="machine-name">Machine Name: </label>
+            <span id="machine-name" data-bind="text:name"></span>
+        </div>
+        <div>
+            <label for="primary-use">Primary Use: </label>
+            <span id="primary-use" data-bind="text: primaryUse"></span>
+        </div>
+        <div>
+            <label for="status">Status:</label>
+            <span id="status">Running 
+                <span data-bind="text: machineStudies().length"></span> studies
+            </span>
+        </div>
+        <div>
+            <label for="date">Date: </label>
+            <span id="date" data-bind="text: date"></span>
+        </div>
+        <div>
+            <label for="software-version">Software Version: </label>
+            <span id="software-version" data-bind="text: softwareVersion"></span>
+        </div>
+        <div>
+            <label for ="user">User: </label>
+            <span id="user" data-bind="text: user"></span>
+        </div>
+    </div>
+</article>

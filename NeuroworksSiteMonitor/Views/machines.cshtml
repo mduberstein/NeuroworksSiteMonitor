@@ -1,0 +1,27 @@
+﻿<section id="machines-view" class="view">
+    <nav>
+        <label for="primary-use">Primary Use</label>
+        @*options - collection to bind to, value - selected object, 
+        optionsText - property name of the bound collection item object to display in dropdown,
+        optionsCaption - string representing the topmost dummy item selected by default before any item was chosen by user
+        LATER: hard coded filter should be replaced by one coming from Data Layer
+        *@
+        <select id="primary-use" data-bind="options: primaryUseOptions, value: machineFilter.primaryUse, optionsCaption:'Choose...'">
+        </select>
+
+@*        <label for="sort-by">Sort By</label>
+        <select id="sort-by" data-bind="options: sortBy, value: machineSorter.date, optionsText:'name', optionsCaption:'All'">
+        </select>*@
+        <button class="clear-trash" data-bind="click: clearAllFilters">Clear Filters</button>
+
+    </nav>
+
+    <div data-bind="template: { name: filterTemplate }"></div>
+    <section class="view-list" data-bind="template: {name: machinesTemplate, foreach: machines}"></section>
+
+<!-- Knockout Debugging -->
+@*    <div style="border: white dotted thin; clear: both">
+        <h4>Machines JSON</h4>
+        <pre data-bind="text: ko.utils.debugInfo(machines)"></pre>
+    </div>*@
+</section>

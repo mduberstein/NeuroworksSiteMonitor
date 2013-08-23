@@ -1,0 +1,57 @@
+﻿<div data-bind="with:machine">
+    <div class="details-left">
+       <div>
+           <label for="machine-name">Machine Name: </label>
+           <span id="machine-name" data-bind="text: name()"></span>
+       </div>
+       <div>
+           <label for="ip-address">IP Address: </label>
+           <span id="ip-address" data-bind="text: ipAddress()"></span>
+       </div>
+         <div>
+           <label for="domain">Domain: </label>
+           <input id="domain" data-bind="value: domain" placeholder="Neuroworks1"/>
+       </div>
+       <div>
+           <label for="settings-server">Common Settings Server: </label>
+           <input id="settings-server" data-bind="value: settingsServer" placeholder="MDUBERSTEIN-DT"/>
+       </div>
+       <div>
+           <label for="common-cash-root">Common Cache Root: </label>
+           <span id="common-cash-root" data-bind="text: commonCacheRoot"></span>
+       </div>
+         <div>
+           <label for="user-name">User Name: </label>
+           <span id="user-name" data-bind="text: user"></span>
+       </div>
+        <div>
+            <label>Software Version: </label>
+            <span data-bind="text: softwareVersion"></span>
+        </div>
+        <div>
+            <label>Serial No: </label>
+            <span data-bind="text: serialNo"></span>
+        </div>
+        <div>
+            <label>Option Pack: </label>
+            <span data-bind="text: optionPack"></span>
+        </div>
+        <div>
+            <label>Primary Use: </label>
+            <span data-bind="text: primaryUse"></span>
+        </div>
+        <div>
+            <label>Platform: </label>
+            <span data-bind="text: platform"></span>
+        </div>
+    </div>
+
+    <div class="details-bottom" data-bind="if: machineStudies().length">
+        <label>Studies:</label>
+        <ul data-bind="foreach: machineStudies">
+            <li>
+                <span data-bind="text: name"></span>
+            </li>
+        </ul>
+    </div>    
+</div>

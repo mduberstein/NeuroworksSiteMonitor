@@ -1,0 +1,14 @@
+﻿<div class="filter-box-container">
+    
+    <input class="filter-box"
+           data-bind="value: machineFilter.searchText, valueUpdate: 'afterkeydown', escape: clearFilter"
+           placeholder="filter by software version" type="text" />
+    
+    <a class="clear-text" data-bind="click: clearFilter" title="Clear"></a>
+    <button class="refresh"         
+        data-bind="command: forceRefreshCmd, activity: forceRefreshCmd.isExecuting">
+        Refresh</button>
+    
+    <small>Showing <span data-bind="text:machines().length"></span> machines</small>
+
+</div>
